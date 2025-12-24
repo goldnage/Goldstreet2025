@@ -1,0 +1,66 @@
+https://github.com/PaloAltoNetworks/Unit42-Wireshark-tutorials/blob/main/Wireshark-tutorial-column-setup.pcap.zip
+
+password: infected
+
+https://github.com/pan-unit42/wireshark-tutorial-decrypting-HTTPS-traffic
+
+https://docs.snort.org/start/
+
+https://github.com/snort3/libdaq
+
+sudo apt install build-essential libpcap-dev libpcre3-dev libnet1-dev zlib1g-dev luajit libdumbnet-dev bison flex liblzma-dev openssl libssl-dev pkg-config libhwloc-dev cmake cpputest libsqlite3-dev uuid-dev libcmocka-dev libnetfilter-queue-dev libmnl-dev autotools-dev libluajit-5.1-dev libunwind-dev libfl-dev -y
+Installation Steps
+Navigate to the libdaq directory: Assuming you have already cloned the repository using git clone https://github.com/snort3/libdaq.git, navigate into the directory where the source code is located.
+bash
+cd libdaq
+Generate configuration scripts: Run the bootstrap script to generate the necessary configuration files. This step requires autoconf and libtool (which are included in the prerequisites).
+bash
+./bootstrap
+Configure the build: Run the ./configure script to prepare the source code for your specific system. It's generally recommended not to use a --prefix here to avoid potential issues with the Snort 3 build process later.
+bash
+./configure
+Compile the source code: Use the make command to compile the library.
+bash
+make
+Install the library: Install the compiled library and its files into the system directories. This usually requires superuser privileges.
+bash
+sudo make install
+Update shared libraries: Run sudo ldconfig to update the system's shared library cache, ensuring that the newly installed libdaq is found by other programs (like Snort 3).
+bash
+sudo ldconfig
+ 
+The libdaq library is now installed and ready for the main Snort 3 installation. 
+How to Install Snort on Ubuntu and Snort Configuration
+2022. 8. 27. — Download and install the latest Snort DAQ by run...
+
+Zenarmor
+
+sudo apt install build-essential libpcap-dev libpcre3-dev libnet1-dev zlib1g-dev luajit libdumbnet-dev bison flex liblzma-dev openssl libssl-dev pkg-config libhwloc-dev cmake cpputest libsqlite3-dev uuid-dev libcmocka-dev libnetfilter-queue-dev libmnl-dev autotools-dev libluajit-5.1-dev libunwind-dev libfl-dev -y
+Installation Steps
+Navigate to the libdaq directory: Assuming you have already cloned the repository using git clone https://github.com/snort3/libdaq.git, navigate into the directory where the source code is located.
+bash
+cd libdaq
+Generate configuration scripts: Run the bootstrap script to generate the necessary configuration files. This step requires autoconf and libtool (which are included in the prerequisites).
+bash
+./bootstrap
+Configure the build: Run the ./configure script to prepare the source code for your specific system. It's generally recommended not to use a --prefix here to avoid potential issues with the Snort 3 build process later.
+bash
+./configure
+Compile the source code: Use the make command to compile the library.
+bash
+make
+Install the library: Install the compiled library and its files into the system directories. This usually requires superuser privileges.
+bash
+sudo make install
+Update shared libraries: Run sudo ldconfig to update the system's shared library cache, ensuring that the newly installed libdaq is found by other programs (like Snort 3).
+bash
+sudo ldconfig
+ 
+The libdaq library is now installed and ready for the main Snort 3 installation. 
+How to Install Snort on Ubuntu and Snort Configuration
+2022. 8. 27. — Download and install the latest Snort DAQ by run...
+
+Zenarmor
+
+sudo apt update
+sudo apt install build-essential libpcap-dev libpcre3-dev libnet1-dev zlib1g-dev luajit libdumbnet-dev bison flex liblzma-dev openssl libssl-dev pkg-config libhwloc-dev cmake cpputest libsqlite3-dev uuid-dev libcmocka-dev libnetfilter-queue-dev libmnl-dev autotools-dev libluajit-5.1-dev libunwind-dev libfl-dev -y
