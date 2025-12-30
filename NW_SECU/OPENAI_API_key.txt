@@ -1,6 +1,0 @@
-OpenAI Platfrom
-https://platform.openai.com/docs/overview
-
-ChatGPT API key
-
-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
